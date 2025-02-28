@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div class="container">
+    <h2>To-Do List</h2>
+    <div class="input-container">
+      <input type="text" id="taskInput" placeholder="Enter task..." />
+      <button class="add-btn" onclick="addTask()">Add</button>
+    </div>
+    <div class="tasklist-container">
+      <p id="emptyMessage" style="color: #FFFF00;">No tasks yet. Please create a list!</p>
+      <ul id="taskList"></ul>
+    </div>    
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

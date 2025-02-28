@@ -1,0 +1,166 @@
+:root {
+  --primary-bg: #121212;
+  --secondary-bg: #252525;
+  --third-bg: #404040;
+  --primary-txt: #F8F8FF;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--primary-bg);
+  text-align: center;
+  overflow: hidden;
+}
+
+.container {
+  max-width: 500px;
+  margin: 50px auto;
+  background: var(--secondary-bg);
+  color: var(--primary-txt);
+  padding: 20px 50px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+  padding-bottom: 10px;
+}
+
+input {
+  width: 70%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #fff;
+  outline: none;
+  transition: border-color .15s ease, box-shadow .15s ease;
+}
+
+input:focus {
+  border-color: #FFD700;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.add-btn {
+  padding: 8px 15px;
+  background: #28a745;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #28a745;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+
+.add-btn:hover {
+  background: #35cc58;
+}
+
+.tasklist-container {
+  max-height: 70vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  /* scrollbar-width: thin; */
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #2c2c2c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #666;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+
+#taskList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background: var(--third-bg);
+  padding: 8px 35px;
+  margin: 5px 0;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  border-radius: 5px;
+  overflow: hidden;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  box-sizing: border-box;
+}
+
+li .fa-bars {
+  color: #8b8b8b;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
+  cursor: grab;
+  transition: color .15s ease;
+}
+
+li .fa-bars:hover {
+  color: #cacaca;
+}
+
+li .fa-bars:active {
+  cursor: grabbing !important;
+}
+
+.edit-input {
+  width: 99%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.delete {
+  position: absolute;
+  top: 50%;
+  right: 5px;
+  transform: translateY(-50%);
+  background: #FF0000;
+  color: var(--primary-txt);
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: background .15s ease;
+}
+
+.delete:hover {
+  background: #ff6464;
+}
+
+li.dragging {
+  opacity: 0.5;
+  background-color: #ddd;
+}
+
+@media(max-width: 425px) {
+  .container {
+    max-width: 500px;
+    margin: 50px auto;
+    background: var(--secondary-bg);
+    color: var(--primary-txt);
+    padding: 20px 10px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+}
